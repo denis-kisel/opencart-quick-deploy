@@ -18,9 +18,9 @@ fi
 for oc_v in ${oc_vs[*]}
 do
 	echo Create/update files for opencart $oc_v
-	#rm -fR $oc_v
-	#mkdir $oc_v
-	#cp -r resources/$oc_v/* $oc_v
+	rm -fR $oc_v
+	mkdir $oc_v
+	cp -r resources/$oc_v/* $oc_v
 
 	echo set configs
 	cp templates/catalog_config.txt $oc_v/config.php
