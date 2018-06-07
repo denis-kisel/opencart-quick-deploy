@@ -14,7 +14,7 @@ Change configs for your environtment:
 
 $ nano init.sh
 
-# Create/update projects:
+# create/update projects:
 
 $ ./init.sh #Will create/update all versions of opencart
 
