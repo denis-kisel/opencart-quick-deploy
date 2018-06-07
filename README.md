@@ -14,11 +14,11 @@ Change configs for your environtment:
 
 $ nano init.sh
 
-Init/update projects:
+# Create/update projects:
 
-$ ./init.sh #Will create all versions of opencart
+$ ./init.sh #Will create/update all versions of opencart
 
-$ ./init.sh 2000 2200 3000 #Will create the specified versions of opencart
+$ ./init.sh 2000 2200 3000 #Will create/update the specified versions of opencart
 
 # test
 Open the link http://yourhost/oc.testplace/ in your browser and select version
