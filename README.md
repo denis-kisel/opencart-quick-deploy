@@ -21,4 +21,6 @@ $ ./init.sh #Will create/update all versions of opencart
 $ ./init.sh 2000 2200 3000 #Will create/update the specified versions of opencart
 
 # test
-Open the link http://yourhost/oc.testplace/ in your browser and select version
+Open the link http://yourhost/oc.testplace/ in your browser and select version.
+
+Access to the admin panel: admin/admin
