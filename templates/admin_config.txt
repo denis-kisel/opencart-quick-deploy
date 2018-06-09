@@ -20,6 +20,7 @@ define('DIR_LOGS', '{dir_route}/{oc_v}/system/storage/logs/');
 define('DIR_MODIFICATION', '{dir_route}/{oc_v}/system/storage/modification/');
 define('DIR_UPLOAD', '{dir_route}/{oc_v}/system/storage/upload/');
 define('DIR_CATALOG', '{dir_route}/{oc_v}/catalog/');
+define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
 
 // DB
 define('DB_DRIVER', '{db_driver}');

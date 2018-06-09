@@ -1,1 +1,7 @@
 conf.sh
+/*/
+!/resources/
+!/templates/
+!conf.EXAMPLE.sh
+!init.sh
+!REDME.md
