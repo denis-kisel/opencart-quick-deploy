@@ -66,7 +66,7 @@ do
 		sed -i "s/{rewrite_base}/${REWRITE_BASE//\//\\/}$oc_v\//g" $oc_v/.htaccess
 		
 		# Fix sql bugs
-		sed -i "s/----/-- --/" $oc_v/install/opencart.sql
+		sed -i "s/----/-- --/" resources/$oc_v/install/opencart.sql
 	fi
 	
 	if [[ $create_db = yes ]]; then
@@ -75,7 +75,7 @@ do
 		DROP DATABASE IF EXISTS opencart_$oc_v;
 		CREATE DATABASE opencart_$oc_v;
 		USE opencart_$oc_v
-		source $oc_v/install/opencart.sql
+		source resources/$oc_v/install/opencart.sql
 		
 		INSERT INTO oc_user (user_id, user_group_id, username, password, salt, firstname, lastname, email, image, code, ip, status, date_added) VALUES (1, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '', '', '', '', '', '', '', 1, '2018-06-05 09:32:05');
 CREATE_DB
