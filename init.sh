@@ -64,13 +64,14 @@ do
 		
 		# Htaccess
 		sed -i "s/{rewrite_base}/${REWRITE_BASE//\//\\/}$oc_v\//g" $oc_v/.htaccess
-		
-		# Fix sql bugs
-		sed -i "s/----/-- --/" resources/$oc_v/install/opencart.sql
 	fi
 	
 	if [[ $create_db = yes ]]; then
 		echo Create/update DB
+		
+		# Fix sql bugs
+		sed -i "s/----/-- --/" resources/$oc_v/install/opencart.sql
+		
 		mysql -u $DB_USER -p$DB_PASS <<CREATE_DB
 		DROP DATABASE IF EXISTS opencart_$oc_v;
 		CREATE DATABASE opencart_$oc_v;
