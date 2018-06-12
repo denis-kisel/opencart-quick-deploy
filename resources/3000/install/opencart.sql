@@ -1,10 +1,10 @@
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Database: `opencart`
 --
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 SET sql_mode = '';
 
@@ -30,7 +30,7 @@ CREATE TABLE `oc_address` (
   KEY `customer_id` (`customer_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_api`
@@ -47,7 +47,7 @@ CREATE TABLE `oc_api` (
   PRIMARY KEY (`api_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_api_ip`
@@ -61,7 +61,7 @@ CREATE TABLE `oc_api_ip` (
   PRIMARY KEY (`api_ip_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_api_session`
@@ -78,7 +78,7 @@ CREATE TABLE `oc_api_session` (
   PRIMARY KEY (`api_session_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_attribute`
@@ -109,7 +109,7 @@ INSERT INTO `oc_attribute` (`attribute_id`, `attribute_group_id`, `sort_order`) 
 (10, 3, 7),
 (11, 3, 8);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_attribute_description`
@@ -140,7 +140,7 @@ INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) V
 (11, 1, 'test 8'),
 (3, 1, 'Clockspeed');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_attribute_group`
@@ -163,7 +163,7 @@ INSERT INTO `oc_attribute_group` (`attribute_group_id`, `sort_order`) VALUES
 (5, 3),
 (6, 4);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_attribute_group_description`
@@ -187,7 +187,7 @@ INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id
 (5, 1, 'Motherboard'),
 (6, 1, 'Processor');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_banner`
@@ -210,7 +210,7 @@ INSERT INTO `oc_banner` (`banner_id`, `name`, `status`) VALUES
 (7, 'Home Page Slideshow', 1),
 (8, 'Manufacturers', 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_banner_image`
@@ -248,7 +248,7 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `t
 (97, 8, 1, 'Starbucks', '', 'catalog/demo/manufacturer/starbucks.png', 0),
 (98, 8, 1, 'Nintendo', '', 'catalog/demo/manufacturer/nintendo.png', 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_cart`
@@ -269,7 +269,7 @@ CREATE TABLE `oc_cart` (
   KEY `cart_id` (`api_id`,`customer_id`,`session_id`,`product_id`,`recurring_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_category`
@@ -334,7 +334,7 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (57, '', 0, 1, 1, 3, 1, '2011-04-26 08:53:16', '2011-05-30 12:15:05'),
 (58, '', 52, 0, 0, 0, 1, '2011-05-08 13:44:16', '2011-05-08 13:44:16');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_category_description`
@@ -397,7 +397,7 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (57, 1, 'Tablets', '', 'Tablets', '', ''),
 (58, 1, 'test 25', '', 'test 25', '', '');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_category_filter`
@@ -410,7 +410,7 @@ CREATE TABLE `oc_category_filter` (
   PRIMARY KEY (`category_id`,`filter_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_category_path`
@@ -501,7 +501,7 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (56, 56, 1),
 (57, 57, 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_category_to_layout`
@@ -515,7 +515,7 @@ CREATE TABLE `oc_category_to_layout` (
   PRIMARY KEY (`category_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_category_to_store`
@@ -572,7 +572,7 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (57, 0),
 (58, 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_country`
@@ -849,7 +849,7 @@ INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `add
 (256, 'Guernsey', 'GG', 'GGY', '', 0, 1),
 (257, 'Jersey', 'JE', 'JEY', '', 0, 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_coupon`
@@ -883,7 +883,7 @@ INSERT INTO `oc_coupon` (`coupon_id`, `name`, `code`, `type`, `discount`, `logge
 (5, 'Free Shipping', '3333', 'P', '0.0000', 0, 1, '100.0000', '2014-01-01', '2014-02-01', 10, '10', 0, '2009-03-14 21:13:53'),
 (6, '-10.00 Discount', '1111', 'F', '10.0000', 0, 0, '10.0000', '2014-01-01', '2020-01-01', 100000, '10000', 0, '2009-03-14 21:15:18');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_coupon_category`
@@ -896,7 +896,7 @@ CREATE TABLE `oc_coupon_category` (
   PRIMARY KEY (`coupon_id`,`category_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_coupon_history`
@@ -913,7 +913,7 @@ CREATE TABLE `oc_coupon_history` (
   PRIMARY KEY (`coupon_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_coupon_product`
@@ -927,7 +927,7 @@ CREATE TABLE `oc_coupon_product` (
   PRIMARY KEY (`coupon_product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_currency`
@@ -956,7 +956,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2014-09-25 14:40:00'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.78460002, 1, '2014-09-25 14:40:00');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer`
@@ -989,7 +989,7 @@ CREATE TABLE `oc_customer` (
   PRIMARY KEY (`customer_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_activity`
@@ -1006,7 +1006,7 @@ CREATE TABLE `oc_customer_activity` (
   PRIMARY KEY (`customer_activity_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_affiliate`
@@ -1034,7 +1034,7 @@ CREATE TABLE `oc_customer_affiliate` (
   PRIMARY KEY (`customer_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_approval`
@@ -1049,7 +1049,7 @@ CREATE TABLE `oc_customer_approval` (
   PRIMARY KEY (`customer_approval_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_group`
@@ -1070,7 +1070,7 @@ CREATE TABLE `oc_customer_group` (
 INSERT INTO `oc_customer_group` (`customer_group_id`, `approval`, `sort_order`) VALUES
 (1, 0, 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_group_description`
@@ -1092,7 +1092,7 @@ CREATE TABLE `oc_customer_group_description` (
 INSERT INTO `oc_customer_group_description` (`customer_group_id`, `language_id`, `name`, `description`) VALUES
 (1, 1, 'Default', 'test');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_history`
@@ -1107,7 +1107,7 @@ CREATE TABLE `oc_customer_history` (
   PRIMARY KEY (`customer_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_login`
@@ -1126,7 +1126,7 @@ CREATE TABLE `oc_customer_login` (
   KEY `ip` (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_ip`
@@ -1142,7 +1142,7 @@ CREATE TABLE `oc_customer_ip` (
   KEY `ip` (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_online`
@@ -1158,7 +1158,7 @@ CREATE TABLE `oc_customer_online` (
   PRIMARY KEY (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_reward`
@@ -1175,7 +1175,7 @@ CREATE TABLE `oc_customer_reward` (
   PRIMARY KEY (`customer_reward_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_transaction`
@@ -1192,7 +1192,7 @@ CREATE TABLE `oc_customer_transaction` (
   PRIMARY KEY (`customer_transaction_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_search`
@@ -1214,7 +1214,7 @@ CREATE TABLE `oc_customer_search` (
   PRIMARY KEY (`customer_search_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_customer_wishlist`
@@ -1228,7 +1228,7 @@ CREATE TABLE `oc_customer_wishlist` (
   PRIMARY KEY (`customer_id`,`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_custom_field`
@@ -1246,7 +1246,7 @@ CREATE TABLE `oc_custom_field` (
   PRIMARY KEY (`custom_field_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_custom_field_customer_group`
@@ -1260,7 +1260,7 @@ CREATE TABLE `oc_custom_field_customer_group` (
   PRIMARY KEY (`custom_field_id`,`customer_group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_custom_field_description`
@@ -1274,7 +1274,7 @@ CREATE TABLE `oc_custom_field_description` (
   PRIMARY KEY (`custom_field_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_custom_field_value`
@@ -1288,7 +1288,7 @@ CREATE TABLE `oc_custom_field_value` (
   PRIMARY KEY (`custom_field_value_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_custom_field_value_description`
@@ -1303,7 +1303,7 @@ CREATE TABLE `oc_custom_field_value_description` (
   PRIMARY KEY (`custom_field_value_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_download`
@@ -1318,7 +1318,7 @@ CREATE TABLE `oc_download` (
   PRIMARY KEY (`download_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_download_description`
@@ -1332,7 +1332,7 @@ CREATE TABLE `oc_download_description` (
   PRIMARY KEY (`download_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_event`
@@ -1420,7 +1420,7 @@ INSERT INTO `oc_event` (`event_id`, `code`, `trigger`, `action`, `status`) VALUE
 INSERT INTO `oc_event` (`event_id`, `code`, `trigger`, `action`, `status`) VALUES
 (33, 'admin_mail_forgotten', 'admin/model/user/user/editCode/after', 'mail/forgotten', 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_extension`
@@ -1480,7 +1480,7 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (40, 'report', 'customer_order'),
 (41, 'report', 'customer_reward');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_extension_install`
@@ -1495,7 +1495,7 @@ CREATE TABLE `oc_extension_install` (
   PRIMARY KEY (`extension_install_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_extension_path`
@@ -1510,7 +1510,7 @@ CREATE TABLE `oc_extension_path` (
   PRIMARY KEY (`extension_path_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_filter`
@@ -1524,7 +1524,7 @@ CREATE TABLE `oc_filter` (
   PRIMARY KEY (`filter_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_filter_description`
@@ -1539,7 +1539,7 @@ CREATE TABLE `oc_filter_description` (
   PRIMARY KEY (`filter_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_filter_group`
@@ -1552,7 +1552,7 @@ CREATE TABLE `oc_filter_group` (
   PRIMARY KEY (`filter_group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_filter_group_description`
@@ -1566,7 +1566,7 @@ CREATE TABLE `oc_filter_group_description` (
   PRIMARY KEY (`filter_group_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_geo_zone`
@@ -1590,7 +1590,7 @@ INSERT INTO `oc_geo_zone` (`geo_zone_id`, `name`, `description`, `date_modified`
 (3, 'UK VAT Zone', 'UK VAT', '2010-02-26 22:33:24', '2009-01-06 23:26:25'),
 (4, 'UK Shipping', 'UK Shipping Zones', '2010-12-15 15:18:13', '2009-06-23 01:14:53');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_information`
@@ -1615,7 +1615,7 @@ INSERT INTO `oc_information` (`information_id`, `bottom`, `sort_order`, `status`
 (5, 1, 4, 1),
 (6, 1, 2, 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_information_description`
@@ -1643,7 +1643,7 @@ INSERT INTO `oc_information_description` (`information_id`, `language_id`, `titl
 (3, 1, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;\r\n', 'Privacy Policy', '', ''),
 (6, 1, 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;\r\n', 'Delivery Information', '', '');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_information_to_layout`
@@ -1657,7 +1657,7 @@ CREATE TABLE `oc_information_to_layout` (
   PRIMARY KEY (`information_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_information_to_store`
@@ -1680,7 +1680,7 @@ INSERT INTO `oc_information_to_store` (`information_id`, `store_id`) VALUES
 (5, 0),
 (6, 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_language`
@@ -1707,7 +1707,7 @@ CREATE TABLE `oc_language` (
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
 (1, 'English', 'en-gb', 'en-US,en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 1, 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_layout`
@@ -1739,7 +1739,7 @@ INSERT INTO `oc_layout` (`layout_id`, `name`) VALUES
 (12, 'Compare'),
 (13, 'Search');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_layout_module`
@@ -1771,7 +1771,7 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (72, 3, 'category', 'column_left', 1),
 (73, 3, 'banner.30', 'column_left', 2);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_layout_route`
@@ -1805,7 +1805,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (52, 12, 0, 'product/compare'),
 (53, 13, 0, 'product/search');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_length_class`
@@ -1827,7 +1827,7 @@ INSERT INTO `oc_length_class` (`length_class_id`, `value`) VALUES
 (2, '10.00000000'),
 (3, '0.39370000');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_length_class_description`
@@ -1851,7 +1851,7 @@ INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `ti
 (2, 1, 'Millimeter', 'mm'),
 (3, 1, 'Inch', 'in');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_location`
@@ -1872,7 +1872,7 @@ CREATE TABLE `oc_location` (
   KEY `name` (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_manufacturer`
@@ -1899,7 +1899,7 @@ INSERT INTO `oc_manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`)
 (9, 'Canon', 'catalog/demo/canon_logo.jpg', 0),
 (10, 'Sony', 'catalog/demo/sony_logo.jpg', 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_manufacturer_to_store`
@@ -1924,7 +1924,7 @@ INSERT INTO `oc_manufacturer_to_store` (`manufacturer_id`, `store_id`) VALUES
 (9, 0),
 (10, 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_marketing`
@@ -1941,7 +1941,7 @@ CREATE TABLE `oc_marketing` (
   PRIMARY KEY (`marketing_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
--------------------------------------------------------------
+-- -- ---------------------------------------------------------
 
 --
 -- Table structure for table `oc_modification`
@@ -1962,7 +1962,7 @@ CREATE TABLE `oc_modification` (
   PRIMARY KEY (`modification_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
--------------------------------------------------------------
+-- -- ---------------------------------------------------------
 
 -- Table structure for table `oc_module`
 --
@@ -1987,7 +1987,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (27, 'Home Page', 'slideshow', '{"name":"Home Page","banner_id":"7","width":"1140","height":"380","status":"1"}'),
 (31, 'Banner 1', 'banner', '{"name":"Banner 1","banner_id":"6","width":"182","height":"182","status":"1"}');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_option`
@@ -2018,7 +2018,7 @@ INSERT INTO `oc_option` (`option_id`, `type`, `sort_order`) VALUES
 (11, 'select', 10),
 (12, 'date', 11);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_option_description`
@@ -2049,7 +2049,7 @@ INSERT INTO `oc_option_description` (`option_id`, `language_id`, `name`) VALUES
 (12, 1, 'Delivery Date'),
 (11, 1, 'Size');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_option_value`
@@ -2084,7 +2084,7 @@ INSERT INTO `oc_option_value` (`option_value_id`, `option_id`, `image`, `sort_or
 (47, 11, '', 2),
 (48, 11, '', 3);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_option_value_description`
@@ -2119,7 +2119,7 @@ INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `op
 (47, 1, 11, 'Medium'),
 (46, 1, 11, 'Small');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order`
@@ -2191,7 +2191,7 @@ CREATE TABLE `oc_order` (
   PRIMARY KEY (`order_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_history`
@@ -2208,7 +2208,7 @@ CREATE TABLE `oc_order_history` (
   PRIMARY KEY (`order_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_option`
@@ -2227,7 +2227,7 @@ CREATE TABLE `oc_order_option` (
   PRIMARY KEY (`order_option_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_product`
@@ -2249,7 +2249,7 @@ CREATE TABLE `oc_order_product` (
   KEY `order_id` (`order_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_recurring`
@@ -2280,7 +2280,7 @@ CREATE TABLE `oc_order_recurring` (
   PRIMARY KEY (`order_recurring_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_recurring_transaction`
@@ -2297,7 +2297,7 @@ CREATE TABLE `oc_order_recurring_transaction` (
   PRIMARY KEY (`order_recurring_transaction_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_shipment`
@@ -2313,7 +2313,7 @@ CREATE TABLE `oc_order_shipment` (
   PRIMARY KEY (`order_shipment_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
+-- -- -- ----------------------------------------------------
 
 --
 -- Table structure for table `oc_shipping_courier`
@@ -2340,7 +2340,7 @@ INSERT INTO `oc_shipping_courier` (`shipping_courier_id`, `shipping_courier_code
   (6, 'auspost', 'Australia Post'),
   (7, 'citylink', 'Citylink');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_status`
@@ -2374,7 +2374,7 @@ INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 (15, 1, 'Processed'),
 (14, 1, 'Expired');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_total`
@@ -2392,7 +2392,7 @@ CREATE TABLE `oc_order_total` (
   KEY `order_id` (`order_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_order_voucher`
@@ -2415,7 +2415,7 @@ CREATE TABLE `oc_order_voucher` (
   PRIMARY KEY (`order_voucher_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product`
@@ -2482,7 +2482,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2011-09-30 01:07:06'),
 (49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2011-04-26 08:57:34', '2011-09-30 01:06:23');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_attribute`
@@ -2508,7 +2508,7 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 (42, 3, 1, '100mhz'),
 (47, 2, 1, '4');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_description`
@@ -2553,7 +2553,7 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (42, 1, 'Apple Cinema 30&quot;', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it''s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple''s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO ''03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'Apple Cinema 30', '', ''),
 (30, 1, 'Canon EOS 5D', '&lt;p&gt;\r\n	Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', '', 'sdf', '', '');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_discount`
@@ -2582,7 +2582,7 @@ INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `custome
 (439, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
 (438, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_filter`
@@ -2595,7 +2595,7 @@ CREATE TABLE `oc_product_filter` (
   PRIMARY KEY (`product_id`,`filter_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_image`
@@ -2678,7 +2678,7 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2314, 42, 'catalog/demo/canon_eos_5d_1.jpg', 0),
 (2313, 42, 'catalog/demo/canon_eos_5d_2.jpg', 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_option`
@@ -2712,7 +2712,7 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 (220, 42, 10, '2011-02-20 22:25', 1),
 (226, 30, 5, '', 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_option_value`
@@ -2758,7 +2758,7 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_recurring`
@@ -2772,7 +2772,7 @@ CREATE TABLE `oc_product_recurring` (
   PRIMARY KEY (`product_id`,`recurring_id`,`customer_group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_related`
@@ -2795,7 +2795,7 @@ INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 (42, 40),
 (42, 41);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_reward`
@@ -2835,7 +2835,7 @@ INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_gr
 (355, 32, 1, 0),
 (521, 49, 1, 1000);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_special`
@@ -2863,7 +2863,7 @@ INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_
 (439, 30, 1, 2, '90.0000', '0000-00-00', '0000-00-00'),
 (438, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_to_category`
@@ -2913,7 +2913,7 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (48, 34),
 (49, 57);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_to_download`
@@ -2926,7 +2926,7 @@ CREATE TABLE `oc_product_to_download` (
   PRIMARY KEY (`product_id`,`download_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_to_layout`
@@ -2940,7 +2940,7 @@ CREATE TABLE `oc_product_to_layout` (
   PRIMARY KEY (`product_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_product_to_store`
@@ -2978,7 +2978,7 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (48, 0),
 (49, 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_recurring`
@@ -3001,7 +3001,7 @@ CREATE TABLE `oc_recurring` (
   PRIMARY KEY (`recurring_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_recurring_description`
@@ -3015,7 +3015,7 @@ CREATE TABLE `oc_recurring_description` (
   PRIMARY KEY (`recurring_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_return`
@@ -3045,7 +3045,7 @@ CREATE TABLE `oc_return` (
   PRIMARY KEY (`return_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_return_action`
@@ -3068,7 +3068,7 @@ INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUE
 (2, 1, 'Credit Issued'),
 (3, 1, 'Replacement Sent');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_return_history`
@@ -3085,7 +3085,7 @@ CREATE TABLE `oc_return_history` (
   PRIMARY KEY (`return_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_return_reason`
@@ -3110,7 +3110,7 @@ INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUE
 (4, 1, 'Faulty, please supply details'),
 (5, 1, 'Other, please supply details');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_return_status`
@@ -3133,7 +3133,7 @@ INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUE
 (3, 1, 'Complete'),
 (2, 1, 'Awaiting Products');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_review`
@@ -3154,7 +3154,7 @@ CREATE TABLE `oc_review` (
   KEY `product_id` (`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 
 --
@@ -3183,7 +3183,7 @@ INSERT INTO `oc_statistics` (`statistics_id`, `code`, `value`) VALUES
 (6, 'product', 0),
 (7, 'review', 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_setting`
@@ -3404,7 +3404,7 @@ INSERT INTO `oc_setting` (`store_id`, `code`, `key`, `value`, `serialized`) VALU
 (0, 'report_marketing', 'report_marketing_status', '1', 0),
 (0, 'report_marketing', 'report_marketing_sort_order', '12', 0);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_stock_status`
@@ -3428,7 +3428,7 @@ INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
 (5, 1, 'Out Of Stock'),
 (6, 1, '2-3 Days');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_store`
@@ -3443,7 +3443,7 @@ CREATE TABLE `oc_store` (
   PRIMARY KEY (`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_tax_class`
@@ -3467,7 +3467,7 @@ INSERT INTO `oc_tax_class` (`tax_class_id`, `title`, `description`, `date_added`
 (9, 'Taxable Goods', 'Taxed goods', '2009-01-06 23:21:53', '2011-09-23 14:07:50'),
 (10, 'Downloadable Products', 'Downloadable', '2011-09-21 22:19:39', '2011-09-22 10:27:36');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_tax_rate`
@@ -3493,7 +3493,7 @@ INSERT INTO `oc_tax_rate` (`tax_rate_id`, `geo_zone_id`, `name`, `rate`, `type`,
 (86, 3, 'VAT (20%)', '20.0000', 'P', '2011-03-09 21:17:10', '2011-09-22 22:24:29'),
 (87, 3, 'Eco Tax (-2.00)', '2.0000', 'F', '2011-09-21 21:49:23', '2011-09-23 00:40:19');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_tax_rate_to_customer_group`
@@ -3514,7 +3514,7 @@ INSERT INTO `oc_tax_rate_to_customer_group` (`tax_rate_id`, `customer_group_id`)
 (86, 1),
 (87, 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_tax_rule`
@@ -3540,7 +3540,7 @@ INSERT INTO `oc_tax_rule` (`tax_rule_id`, `tax_class_id`, `tax_rate_id`, `based`
 (128, 9, 86, 'shipping', 1),
 (127, 9, 87, 'shipping', 2);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_theme`
@@ -3557,7 +3557,7 @@ CREATE TABLE `oc_theme` (
   PRIMARY KEY (`theme_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_translation`
@@ -3575,7 +3575,7 @@ CREATE TABLE `oc_translation` (
   PRIMARY KEY (`translation_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_upload`
@@ -3591,7 +3591,7 @@ CREATE TABLE `oc_upload` (
   PRIMARY KEY (`upload_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_seo_url`
@@ -3682,7 +3682,7 @@ INSERT INTO `oc_seo_url` (`seo_url_id`, `store_id`, `language_id`, `query`, `key
 (842, 0, 1, 'information_id=3', 'privacy'),
 (843, 0, 1, 'information_id=5', 'terms');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_user`
@@ -3706,7 +3706,7 @@ CREATE TABLE `oc_user` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_user_group`
@@ -3728,7 +3728,7 @@ INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
 (1, 'Administrator', '{"access":["catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/profile","customer\\/custom_field","customer\\/customer","customer\\/customer_approval","customer\\/customer_group","design\\/banner","design\\/layout","design\\/theme","design\\/translation","event\\/statistics","event\\/theme","extension\\/analytics\\/google","extension\\/captcha\\/basic","extension\\/captcha\\/google","extension\\/dashboard\\/activity","extension\\/dashboard\\/chart","extension\\/dashboard\\/customer","extension\\/dashboard\\/map","extension\\/dashboard\\/online","extension\\/dashboard\\/order","extension\\/dashboard\\/recent","extension\\/dashboard\\/sale","extension\\/extension\\/analytics","extension\\/extension\\/captcha","extension\\/extension\\/dashboard","extension\\/extension\\/feed","extension\\/extension\\/fraud","extension\\/extension\\/menu","extension\\/extension\\/module","extension\\/extension\\/payment","extension\\/extension\\/report","extension\\/extension\\/shipping","extension\\/extension\\/theme","extension\\/extension\\/total","extension\\/feed\\/google_base","extension\\/feed\\/google_sitemap","extension\\/feed\\/openbaypro","extension\\/fraud\\/fraudlabspro","extension\\/fraud\\/ip","extension\\/fraud\\/maxmind","extension\\/marketing\\/remarketing","extension\\/module\\/account","extension\\/module\\/amazon_login","extension\\/module\\/amazon_pay","extension\\/module\\/banner","extension\\/module\\/bestseller","extension\\/module\\/carousel","extension\\/module\\/category","extension\\/module\\/divido_calculator","extension\\/module\\/ebay_listing","extension\\/module\\/featured","extension\\/module\\/filter","extension\\/module\\/google_hangouts","extension\\/module\\/html","extension\\/module\\/information","extension\\/module\\/klarna_checkout_module","extension\\/module\\/latest","extension\\/module\\/laybuy_layout","extension\\/module\\/pilibaba_button","extension\\/module\\/pp_button","extension\\/module\\/pp_login","extension\\/module\\/sagepay_direct_cards","extension\\/module\\/sagepay_server_cards","extension\\/module\\/slideshow","extension\\/module\\/special","extension\\/module\\/store","extension\\/openbay\\/amazon","extension\\/openbay\\/amazon_listing","extension\\/openbay\\/amazon_product","extension\\/openbay\\/amazonus","extension\\/openbay\\/amazonus_listing","extension\\/openbay\\/amazonus_product","extension\\/openbay\\/ebay","extension\\/openbay\\/ebay_profile","extension\\/openbay\\/ebay_template","extension\\/openbay\\/etsy","extension\\/openbay\\/etsy_product","extension\\/openbay\\/etsy_shipping","extension\\/openbay\\/etsy_shop","extension\\/openbay\\/fba","extension\\/payment\\/amazon_login_pay","extension\\/payment\\/authorizenet_aim","extension\\/payment\\/authorizenet_sim","extension\\/payment\\/bank_transfer","extension\\/payment\\/bluepay_hosted","extension\\/payment\\/bluepay_redirect","extension\\/payment\\/cardconnect","extension\\/payment\\/cardinity","extension\\/payment\\/cheque","extension\\/payment\\/cod","extension\\/payment\\/divido","extension\\/payment\\/eway","extension\\/payment\\/firstdata","extension\\/payment\\/firstdata_remote","extension\\/payment\\/free_checkout","extension\\/payment\\/g2apay","extension\\/payment\\/globalpay","extension\\/payment\\/globalpay_remote","extension\\/payment\\/klarna_account","extension\\/payment\\/klarna_checkout","extension\\/payment\\/klarna_invoice","extension\\/payment\\/laybuy","extension\\/payment\\/liqpay","extension\\/payment\\/nochex","extension\\/payment\\/paymate","extension\\/payment\\/paypoint","extension\\/payment\\/payza","extension\\/payment\\/perpetual_payments","extension\\/payment\\/pilibaba","extension\\/payment\\/pp_express","extension\\/payment\\/pp_payflow","extension\\/payment\\/pp_payflow_iframe","extension\\/payment\\/pp_pro","extension\\/payment\\/pp_pro_iframe","extension\\/payment\\/pp_standard","extension\\/payment\\/realex","extension\\/payment\\/realex_remote","extension\\/payment\\/sagepay_direct","extension\\/payment\\/sagepay_server","extension\\/payment\\/sagepay_us","extension\\/payment\\/securetrading_pp","extension\\/payment\\/securetrading_ws","extension\\/payment\\/skrill","extension\\/payment\\/twocheckout","extension\\/payment\\/web_payment_software","extension\\/payment\\/worldpay","extension\\/module\\/pp_braintree_button","extension\\/payment\\/pp_braintree","extension\\/report\\/customer_activity","extension\\/report\\/customer_order","extension\\/report\\/customer_reward","extension\\/report\\/customer_search","extension\\/report\\/customer_transaction","extension\\/report\\/marketing","extension\\/report\\/product_purchased","extension\\/report\\/product_viewed","extension\\/report\\/sale_coupon","extension\\/report\\/sale_order","extension\\/report\\/sale_return","extension\\/report\\/sale_shipping","extension\\/report\\/sale_tax","extension\\/shipping\\/auspost","extension\\/shipping\\/citylink","extension\\/shipping\\/ec_ship","extension\\/shipping\\/fedex","extension\\/shipping\\/flat","extension\\/shipping\\/free","extension\\/shipping\\/item","extension\\/shipping\\/parcelforce_48","extension\\/shipping\\/pickup","extension\\/shipping\\/royal_mail","extension\\/shipping\\/ups","extension\\/shipping\\/usps","extension\\/shipping\\/weight","extension\\/theme\\/default","extension\\/total\\/coupon","extension\\/total\\/credit","extension\\/total\\/handling","extension\\/total\\/klarna_fee","extension\\/total\\/low_order_fee","extension\\/total\\/reward","extension\\/total\\/shipping","extension\\/total\\/sub_total","extension\\/total\\/tax","extension\\/total\\/total","extension\\/total\\/voucher","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","mail\\/affiliate","mail\\/customer","mail\\/forgotten","mail\\/return","mail\\/reward","mail\\/transaction","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","marketplace\\/api","marketplace\\/event","marketplace\\/extension","marketplace\\/install","marketplace\\/installer","marketplace\\/marketplace","marketplace\\/modification","marketplace\\/openbay","report\\/online","report\\/report","report\\/statistics","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","startup\\/error","startup\\/event","startup\\/login","startup\\/permission","startup\\/router","startup\\/sass","startup\\/startup","tool\\/backup","tool\\/log","tool\\/upload","user\\/api","user\\/user","user\\/user_permission"],"modify":["catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/profile","customer\\/custom_field","customer\\/customer","customer\\/customer_approval","customer\\/customer_group","design\\/banner","design\\/layout","design\\/theme","design\\/translation","event\\/statistics","event\\/theme","extension\\/analytics\\/google","extension\\/captcha\\/basic","extension\\/captcha\\/google","extension\\/dashboard\\/activity","extension\\/dashboard\\/chart","extension\\/dashboard\\/customer","extension\\/dashboard\\/map","extension\\/dashboard\\/online","extension\\/dashboard\\/order","extension\\/dashboard\\/recent","extension\\/dashboard\\/sale","extension\\/extension\\/analytics","extension\\/extension\\/captcha","extension\\/extension\\/dashboard","extension\\/extension\\/feed","extension\\/extension\\/fraud","extension\\/extension\\/menu","extension\\/extension\\/module","extension\\/extension\\/payment","extension\\/extension\\/report","extension\\/extension\\/shipping","extension\\/extension\\/theme","extension\\/extension\\/total","extension\\/feed\\/google_base","extension\\/feed\\/google_sitemap","extension\\/feed\\/openbaypro","extension\\/fraud\\/fraudlabspro","extension\\/fraud\\/ip","extension\\/fraud\\/maxmind","extension\\/marketing\\/remarketing","extension\\/module\\/account","extension\\/module\\/amazon_login","extension\\/module\\/amazon_pay","extension\\/module\\/banner","extension\\/module\\/bestseller","extension\\/module\\/carousel","extension\\/module\\/category","extension\\/module\\/divido_calculator","extension\\/module\\/ebay_listing","extension\\/module\\/featured","extension\\/module\\/filter","extension\\/module\\/google_hangouts","extension\\/module\\/html","extension\\/module\\/information","extension\\/module\\/klarna_checkout_module","extension\\/module\\/latest","extension\\/module\\/laybuy_layout","extension\\/module\\/pilibaba_button","extension\\/module\\/pp_button","extension\\/module\\/pp_login","extension\\/module\\/sagepay_direct_cards","extension\\/module\\/sagepay_server_cards","extension\\/module\\/slideshow","extension\\/module\\/special","extension\\/module\\/store","extension\\/openbay\\/amazon","extension\\/openbay\\/amazon_listing","extension\\/openbay\\/amazon_product","extension\\/openbay\\/amazonus","extension\\/openbay\\/amazonus_listing","extension\\/openbay\\/amazonus_product","extension\\/openbay\\/ebay","extension\\/openbay\\/ebay_profile","extension\\/openbay\\/ebay_template","extension\\/openbay\\/etsy","extension\\/openbay\\/etsy_product","extension\\/openbay\\/etsy_shipping","extension\\/openbay\\/etsy_shop","extension\\/openbay\\/fba","extension\\/payment\\/amazon_login_pay","extension\\/payment\\/authorizenet_aim","extension\\/payment\\/authorizenet_sim","extension\\/payment\\/bank_transfer","extension\\/payment\\/bluepay_hosted","extension\\/payment\\/bluepay_redirect","extension\\/payment\\/cardconnect","extension\\/payment\\/cardinity","extension\\/payment\\/cheque","extension\\/payment\\/cod","extension\\/payment\\/divido","extension\\/payment\\/eway","extension\\/payment\\/firstdata","extension\\/payment\\/firstdata_remote","extension\\/payment\\/free_checkout","extension\\/payment\\/g2apay","extension\\/payment\\/globalpay","extension\\/payment\\/globalpay_remote","extension\\/payment\\/klarna_account","extension\\/payment\\/klarna_checkout","extension\\/payment\\/klarna_invoice","extension\\/payment\\/laybuy","extension\\/payment\\/liqpay","extension\\/payment\\/nochex","extension\\/payment\\/paymate","extension\\/payment\\/paypoint","extension\\/payment\\/payza","extension\\/payment\\/perpetual_payments","extension\\/payment\\/pilibaba","extension\\/payment\\/pp_express","extension\\/payment\\/pp_payflow","extension\\/payment\\/pp_payflow_iframe","extension\\/payment\\/pp_pro","extension\\/payment\\/pp_pro_iframe","extension\\/payment\\/pp_standard","extension\\/payment\\/realex","extension\\/payment\\/realex_remote","extension\\/payment\\/sagepay_direct","extension\\/payment\\/sagepay_server","extension\\/payment\\/sagepay_us","extension\\/payment\\/securetrading_pp","extension\\/payment\\/securetrading_ws","extension\\/payment\\/skrill","extension\\/payment\\/twocheckout","extension\\/payment\\/web_payment_software","extension\\/payment\\/worldpay","extension\\/module\\/pp_braintree_button","extension\\/payment\\/pp_braintree","extension\\/report\\/customer_activity","extension\\/report\\/customer_order","extension\\/report\\/customer_reward","extension\\/report\\/customer_search","extension\\/report\\/customer_transaction","extension\\/report\\/marketing","extension\\/report\\/product_purchased","extension\\/report\\/product_viewed","extension\\/report\\/sale_coupon","extension\\/report\\/sale_order","extension\\/report\\/sale_return","extension\\/report\\/sale_shipping","extension\\/report\\/sale_tax","extension\\/shipping\\/auspost","extension\\/shipping\\/citylink","extension\\/shipping\\/ec_ship","extension\\/shipping\\/fedex","extension\\/shipping\\/flat","extension\\/shipping\\/free","extension\\/shipping\\/item","extension\\/shipping\\/parcelforce_48","extension\\/shipping\\/pickup","extension\\/shipping\\/royal_mail","extension\\/shipping\\/ups","extension\\/shipping\\/usps","extension\\/shipping\\/weight","extension\\/theme\\/default","extension\\/total\\/coupon","extension\\/total\\/credit","extension\\/total\\/handling","extension\\/total\\/klarna_fee","extension\\/total\\/low_order_fee","extension\\/total\\/reward","extension\\/total\\/shipping","extension\\/total\\/sub_total","extension\\/total\\/tax","extension\\/total\\/total","extension\\/total\\/voucher","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","mail\\/affiliate","mail\\/customer","mail\\/forgotten","mail\\/return","mail\\/reward","mail\\/transaction","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","marketplace\\/event","marketplace\\/api","marketplace\\/extension","marketplace\\/install","marketplace\\/installer","marketplace\\/marketplace","marketplace\\/modification","marketplace\\/openbay","report\\/online","report\\/report","report\\/statistics","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","startup\\/error","startup\\/event","startup\\/login","startup\\/permission","startup\\/router","startup\\/sass","startup\\/startup","tool\\/backup","tool\\/log","tool\\/upload","user\\/api","user\\/user","user\\/user_permission"]}'),
 (10, 'Demonstration', '');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_voucher`
@@ -3751,7 +3751,7 @@ CREATE TABLE `oc_voucher` (
   PRIMARY KEY (`voucher_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_voucher_history`
@@ -3767,7 +3767,7 @@ CREATE TABLE `oc_voucher_history` (
   PRIMARY KEY (`voucher_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_voucher_theme`
@@ -3789,7 +3789,7 @@ INSERT INTO `oc_voucher_theme` (`voucher_theme_id`, `image`) VALUES
 (7, 'catalog/demo/gift-voucher-birthday.jpg'),
 (6, 'catalog/demo/apple_logo.jpg');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_voucher_theme_description`
@@ -3812,7 +3812,7 @@ INSERT INTO `oc_voucher_theme_description` (`voucher_theme_id`, `language_id`, `
 (7, 1, 'Birthday'),
 (8, 1, 'General');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_weight_class`
@@ -3835,7 +3835,7 @@ INSERT INTO `oc_weight_class` (`weight_class_id`, `value`) VALUES
 (5, '2.20460000'),
 (6, '35.27400000');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_weight_class_description`
@@ -3860,7 +3860,7 @@ INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `ti
 (5, 1, 'Pound ', 'lb'),
 (6, 1, 'Ounce', 'oz');
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_zone`
@@ -7992,7 +7992,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 (4237, 105, 'Fermo', 'FM', 1),
 (4238, 105, 'Monza Brianza', 'MB', 1);
 
------------------------------------------------------------
+-- -- -------------------------------------------------------
 
 --
 -- Table structure for table `oc_zone_to_geo_zone`
