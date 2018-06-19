@@ -86,6 +86,15 @@ do
 		source resources/$oc_v/install/opencart.sql
 
 		INSERT INTO oc_user (user_id, user_group_id, username, password, salt, firstname, lastname, email, image, code, ip, status, date_added) VALUES (1, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '', '', '', '', '', '', '', 1, '2018-06-05 09:32:05');
+
+    DELETE FROM oc_setting WHERE \`key\` LIKE 'config_ftp%';
+    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_status', '$FTP_STATUS', 0);
+    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_root', '${DIR_ROOT//\//\\/}/$oc_v', 0);
+    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_password', '$FTP_PASSWORD', 0);
+    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_username', '$FTP_USERNAME', 0);
+    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_port', '$FTP_PORT', 0);
+    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_hostname', '${FTP_HOSTNAME//\//\\/}', 0);
+
 CREATE_DB
 	fi
 done
