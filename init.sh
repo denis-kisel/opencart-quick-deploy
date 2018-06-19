@@ -79,22 +79,43 @@ do
 		# Fix sql bugs
 		sed -i "s/----/-- --/" resources/$oc_v/install/opencart.sql
 
-		mysql -u $DB_USER -p$DB_PASS <<CREATE_DB
-		DROP DATABASE IF EXISTS opencart_$oc_v;
-		CREATE DATABASE $PREFIX_DB$oc_v;
-		USE $PREFIX_DB$oc_v
-		source resources/$oc_v/install/opencart.sql
+    if [[ $oc_v = 2000 ]]; then
+      mysql -u $DB_USER -p$DB_PASS <<CREATE_DB
+  		DROP DATABASE IF EXISTS opencart_$oc_v;
+  		CREATE DATABASE $PREFIX_DB$oc_v;
+  		USE $PREFIX_DB$oc_v
+  		source resources/$oc_v/install/opencart.sql
 
-		INSERT INTO oc_user (user_id, user_group_id, username, password, salt, firstname, lastname, email, image, code, ip, status, date_added) VALUES (1, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '', '', '', '', '', '', '', 1, '2018-06-05 09:32:05');
+  		INSERT INTO oc_user (user_id, user_group_id, username, password, salt, firstname, lastname, email, image, code, ip, status, date_added) VALUES (1, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '', '', '', '', '', '', '', 1, '2018-06-05 09:32:05');
 
-    DELETE FROM oc_setting WHERE \`key\` LIKE 'config_ftp%';
-    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_status', '$FTP_STATUS', 0);
-    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_root', '${DIR_ROOT//\//\\/}/$oc_v', 0);
-    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_password', '$FTP_PASSWORD', 0);
-    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_username', '$FTP_USERNAME', 0);
-    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_port', '$FTP_PORT', 0);
-    INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_hostname', '${FTP_HOSTNAME//\//\\/}', 0);
+      DELETE FROM oc_setting WHERE \`key\` LIKE 'config_ftp%';
 
+      INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_status', '$FTP_STATUS', 0);
+      INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_root', '${DIR_ROOT//\//\\/}/$oc_v', 0);
+      INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_password', '$FTP_PASSWORD', 0);
+      INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_username', '$FTP_USERNAME', 0);
+      INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_port', '$FTP_PORT', 0);
+      INSERT INTO oc_setting (store_id, \`group\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_hostname', '${FTP_HOSTNAME//\//\\/}', 0);
 CREATE_DB
+
+    else
+      mysql -u $DB_USER -p$DB_PASS <<CREATE_DB
+      DROP DATABASE IF EXISTS opencart_$oc_v;
+      CREATE DATABASE $PREFIX_DB$oc_v;
+      USE $PREFIX_DB$oc_v
+      source resources/$oc_v/install/opencart.sql
+
+      INSERT INTO oc_user (user_id, user_group_id, username, password, salt, firstname, lastname, email, image, code, ip, status, date_added) VALUES (1, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '', '', '', '', '', '', '', 1, '2018-06-05 09:32:05');
+
+      DELETE FROM oc_setting WHERE \`key\` LIKE 'config_ftp%';
+
+      INSERT INTO oc_setting (store_id, \`code\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_status', '$FTP_STATUS', 0);
+      INSERT INTO oc_setting (store_id, \`code\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_root', '${DIR_ROOT//\//\\/}/$oc_v', 0);
+      INSERT INTO oc_setting (store_id, \`code\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_password', '$FTP_PASSWORD', 0);
+      INSERT INTO oc_setting (store_id, \`code\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_username', '$FTP_USERNAME', 0);
+      INSERT INTO oc_setting (store_id, \`code\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_port', '$FTP_PORT', 0);
+      INSERT INTO oc_setting (store_id, \`code\`, \`key\`, \`value\`, serialized) VALUES (0, 'config', 'config_ftp_hostname', '${FTP_HOSTNAME//\//\\/}', 0);
+CREATE_DB
+    fi
 	fi
 done
