@@ -30,7 +30,7 @@ Change configs for your environtment:
 
 # Example:
 
-`Create/update datebases for opencart versions 2200, 2302, 3000`  
+Create/update datebases for opencart versions 2200, 2302, 3000  
 
 `$ ./init.sh v:2200,2302,3000 odb`  
 
