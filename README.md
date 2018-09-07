@@ -1,10 +1,10 @@
-# Opencart-testplace
-Rapid deployment of all versions of opencart for testing extensions
+# Overview
+Rapid deployment of all versions of opencart
 
 # Install
 `$ cd /path/to/root-server-directory`  
 
-`$ git clone https://github.com/denis-kisel/opencart-testplace oc.testplace`
+`$ git clone https://github.com/denis-kisel/opencart-quick-deploy oc.testplace`
 
 # Settings
 
