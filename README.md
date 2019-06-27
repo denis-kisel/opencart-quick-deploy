@@ -1,6 +1,10 @@
 # Overview
 Rapid deployment of all versions of opencart
 
+# Warning!
+This is repository is abonded, please, see this version:
+https://github.com/denis-kisel/opencart-deploy
+
 # Install
 `$ cd /path/to/root-server-directory`  
 
